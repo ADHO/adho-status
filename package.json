@@ -1,0 +1,57 @@
+{
+  "name": "adho-status",
+  "version": "0.1.0",
+  "description": "A dashboard for ADHO status checks.",
+  "author": "Simon Wiles",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel --no-cache index.html",
+    "build": "parcel build index.html --detailed-report",
+    "build:production": "rm -rf dist && parcel build --no-cache --no-source-maps --public-url '.' index.html",
+    "lint": "eslint src/ --ext jsx --ext js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "main": "dist/index.html",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-jest": "^26.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "jest": "^26.0.1",
+    "parcel": "^2.0.0-nightly.256",
+    "sass": "^1.26.5"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ],
+    "roots": [
+      "./__tests__/",
+      "src/"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/index.js"
+    ]
+  }
+}

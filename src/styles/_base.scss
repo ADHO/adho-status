@@ -1,0 +1,58 @@
+body {
+  background: #fafafa;
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0 auto 15px;
+  max-width: 45em;
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid var(--active-link);
+    color: var(--active-link);
+    text-decoration: none;
+  }
+
+  &:active {
+    border-bottom-width: 2px;
+  }
+}
+
+h1 {
+  color: var(--main-heading);
+  font-size: var(--f4);
+  font-weight: 300;
+  line-height: 1em;
+}
+
+h2,
+.status-legend {
+  color: var(--sub-heading);
+  font-size: var(--f4);
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0 0 15px 0;
+}
+
+h3 {
+  color: var(--sub-heading);
+  font-size: var(--f3);
+  font-weight: normal;
+}
+
+h3.service-name {
+  font-size: var(--f1);
+  margin: 0;
+}

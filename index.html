@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="dcterms: http://purl.org/dc/terms/#">
+  <meta charset="utf-8" />
+  <title>ADHO Sevices Status Page</title>
+  <meta name="version" content="%%COMMIT-HASH%%"> <!-- post-processed in deploy script -->
+  <meta name="dcterms.modified" content="%%BUILD-DATE%%"> <!-- post-processed in deploy script -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/styles.scss">
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>
+        <a href="https://adho.org/">
+          <img src="src/assets/adho.210x75.png" alt="Alliance of Digital Humanities Organizations">
+        </a>
+        System Status
+      </h1>
+      <!-- <nav></nav> -->
+    </div>
+  </header>
+  <div id="root"></div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
