@@ -21,7 +21,7 @@ A lightweight dashboard for displaying the status of ADHO-supported infrastructu
 
 ## Deploy to GH Pages
 1. `./bin/deploy.sh` from the project root will install dependencies, build the static assets, and update and push to the `gh-pages` branch
-1. Visit https://adho.github.io/adho-status/
+1. Visit https://adho.github.io/adho-status/ or https://status.adho.org/
 
 ## Adding or Changing Service Tests
 The items to be displayed here are listed in [`src/config.js`](src/config.js)
