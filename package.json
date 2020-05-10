@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "parcel --no-cache index.html",
     "build": "parcel build index.html --detailed-report",
-    "build:production": "rm -rf dist && parcel build --no-cache --no-source-maps --public-url '.' index.html",
+    "build:production": "rm -rf dist && parcel build --no-cache --no-source-maps --public-url '.' index.html && yarn postbuild",
+    "postbuild": "ncp src/assets/favicon dist --filter='(favicon|favicon.ico|android.*|browserconfig.xml|mstile.*)$'",
     "lint": "eslint src/ --ext jsx --ext js",
     "test": "jest",
     "test:watch": "jest --watch",
