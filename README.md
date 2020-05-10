@@ -3,7 +3,7 @@
 A lightweight dashboard for displaying the status of ADHO-supported infrastructure.
 
 ## Run Locally
-1. git clone this repository
+1. `git clone` this repository
 
 ### Live Updating Development Build
 1. `yarn`
