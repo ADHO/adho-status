@@ -15,9 +15,6 @@ git checkout gh-pages &&
 # pull the latest updates
 git pull origin gh-pages --rebase &&
 
-# remove unneeded source files
-ls -AI .gitignore -I dist | xargs git rm -rf --ignore-unmatch &&
-
 # move built site to repo root
 mv dist/* . &&
 
