@@ -11,7 +11,7 @@ A lightweight dashboard for displaying the status of ADHO-supported infrastructu
 1. Visit `localhost:1234` in your browser
 
 ### Static Build
-1. `yarn build` for a development build, `yarn build:production` for a production build (with sourcemaps)
+1. `yarn build` for a development build (with sourcemaps), `yarn build:production` for a production build
 1. Visit `dist/` using an http server
 
 ## Linting and Testing
