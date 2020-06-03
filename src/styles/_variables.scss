@@ -11,12 +11,16 @@
   --font-stack: Palanquin, sans-serif;
 
   // Modular scale with a major third interval
+  // -----------------------------------------
+
+  // Multipliers
   --x1: 1.25;
   --x2: calc(var(--x1) * var(--x1));
   --x3: calc(var(--x2) * var(--x1));
   --x4: calc(var(--x3) * var(--x1));
   --x5: calc(var(--x4) * var(--x1));
 
+  // Font Sizes
   --f1: calc(1em * var(--x1));
   --f2: calc(1em * var(--x2));
   --f3: calc(1em * var(--x3));
