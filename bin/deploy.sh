@@ -31,5 +31,5 @@ git commit -m "Update sites from $COMMIT" &&
 # push to github
 git push origin gh-pages &&
 
-# return to master
-git checkout master;
+# return to main
+git checkout main;
