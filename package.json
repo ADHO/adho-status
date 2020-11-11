@@ -15,6 +15,10 @@
     "coverage": "jest --coverage"
   },
   "main": "dist/index.html",
+  "engines": {
+    "node": ">=12.11"
+  },
+  "engineStrict": true,
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
