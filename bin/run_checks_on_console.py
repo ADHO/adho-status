@@ -5,11 +5,18 @@
     otherwise, it will be 1 (error).  This makes it suitable for use from a cron job. """
 
 import argparse
+import sys
 
 import regex
 import requests
 import yaml
-from termcolor import colored
+from termcolor import colored as _colored
+
+
+def colored(text, *args, **kwargs):
+    if sys.stdout.isatty():
+        return _colored(text, *args, **kwargs)
+    return text
 
 
 def get_config_from_github():
