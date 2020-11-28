@@ -60,10 +60,10 @@ def main():
 
     checks = parse_config(config)
 
-    if all(do_check(check) for check in checks.values()):
-        raise SystemExit(0)
+    if sum(not do_check(check) for check in checks.values()):
+        raise SystemExit(1)
 
-    raise SystemExit(1)
+    raise SystemExit(0)
 
 
 if __name__ == "__main__":
