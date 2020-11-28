@@ -2,7 +2,12 @@
 
 """ This python module will run the checks from src/config.js and produce output on the
     console.  If all checks complete successfully, the return code will be 0 (success) --
-    otherwise, it will be 1 (error).  This makes it suitable for use from a cron job. """
+    otherwise, it will be 1 (error).  This makes it suitable for use from a cron job.
+
+    Suggested usage from cron:
+      SHELL=/bin/bash
+      5 * * * *  output=$(/path/to/run_checks_on_console.py) || echo "$output"
+"""
 
 import argparse
 import sys
