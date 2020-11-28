@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-""" This python module will run the checks from src/config.js and produce output on the console.
-    If all checks complete successfully, the return code will be 0 (success) -- otherwise, it will
-    be 1 (error).  This makes it suitable for use from a cron job. """
+""" This python module will run the checks from src/config.js and produce output on the
+    console.  If all checks complete successfully, the return code will be 0 (success) --
+    otherwise, it will be 1 (error).  This makes it suitable for use from a cron job. """
 
 import argparse
 
@@ -31,7 +31,7 @@ def do_check(check):
     response = requests.get(check["endpointUrl"])
 
     if response.status_code == 200 and check["matchText"] in response.text:
-        msg.good(f"200 Okay!")
+        msg.good("200 Okay!")
         return True
 
     msg.fail(f"{response.status_code}")
