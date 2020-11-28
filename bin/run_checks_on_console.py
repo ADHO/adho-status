@@ -42,11 +42,18 @@ def do_check(check):
     print(f"Checking {check['displayName']}...")
     response = requests.get(check["endpointUrl"])
 
-    if response.status_code == 200 and check["matchText"] in response.text:
+    test = check["matchText"] in response.text
+    if response.status_code == 200 and test:
         print(colored("✔ 200 Okay!", "green", attrs=["bold"]))
         return True
 
-    print(colored(f"✘ {response.status_code}", "red", attrs=["bold"]))
+    print(
+        colored(
+            f"✘ {response.status_code} (content test {('failed', 'passed')[test]})",
+            "red",
+            attrs=["bold"],
+        )
+    )
     return False
 
 
