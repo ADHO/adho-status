@@ -12,6 +12,9 @@
     "browser": true,
     "jest": true
   },
+  "settings": {
+    "import/resolver": "parcel2"
+  },
   "rules": {
     "jsx-a11y/label-has-for": [
       2,
