@@ -9,7 +9,7 @@ import argparse
 import regex
 import requests
 import yaml
-from wasabi import msg
+from termcolor import colored
 
 
 def get_config_from_github():
@@ -27,14 +27,14 @@ def parse_config(config):
 
 
 def do_check(check):
-    msg.text(f"Checking {check['displayName']}...")
+    print(f"Checking {check['displayName']}...")
     response = requests.get(check["endpointUrl"])
 
     if response.status_code == 200 and check["matchText"] in response.text:
-        msg.good("200 Okay!")
+        print(colored("✔ 200 Okay!", "green", attrs=["bold"]))
         return True
 
-    msg.fail(f"{response.status_code}")
+    print(colored(f"✘ {response.status_code}", "red", attrs=["bold"]))
     return False
 
 
