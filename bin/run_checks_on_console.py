@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+""" This python module will run the checks from src/config.js and produce output on the console.
+    If all checks complete successfully, the return code will be 0 (success) -- otherwise, it will
+    be 1 (error).  This makes it suitable for use from a cron job. """
+
+import regex
+import requests
+import yaml
+from wasabi import msg
+
+
+def get_checks():
+    config_url = "https://raw.githubusercontent.com/ADHO/adho-status/main/src/config.js"
+    services_object_regex = regex.compile(r"services\s*=\s*(\{(?:[^{}]|(?1))*\})")
+
+    response = requests.get(config_url)
+    checks = services_object_regex.search(response.text)
+
+    return yaml.safe_load(checks.group(1))
+
+
+def do_check(check):
+    msg.text(f"Checking {check['displayName']}...")
+    response = requests.get(check["endpointUrl"])
+
+    if response.status_code == 200 and check["matchText"] in response.text:
+        msg.good(f"200 Okay!")
+        return True
+
+    msg.fail(f"{response.status_code}")
+    return False
+
+
+def main():
+    """ Command-line entry-point. """
+    checks = get_checks()
+
+    if all(do_check(check) for check in checks.values()):
+        raise SystemExit(0)
+
+    raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()
