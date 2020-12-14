@@ -60,5 +60,8 @@
     "coveragePathIgnorePatterns": [
       "src/index.js"
     ]
+  },
+  "resolutions": {
+    "emphasize": "^4.1.0"
   }
 }
