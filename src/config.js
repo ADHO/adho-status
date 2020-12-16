@@ -30,15 +30,14 @@ export const services = {
 
 export const statuses = {
   pending: {
-    icon: "🔄",
     message: "Checking status...",
   },
   up: {
-    icon: "✅",
+    icon: "✔",
     message: "No known issues",
   },
   maintenance: {
-    icon: "🛠",
+    icon: "⚒",
     message: "Temporarily unavailable for maintenance",
   },
   issue: {
@@ -46,7 +45,7 @@ export const statuses = {
     message: "There may be an issue with this site",
   },
   fail: {
-    icon: "❕",
+    icon: "❗",
     message: "Site unavailable",
   },
   outage: {
