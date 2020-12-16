@@ -12,7 +12,7 @@ export function testDrupalHealthCheck(response) {
     .text()
     .then((data) => {
       const lastLine = data.split("\n").pop();
-      if (lastLine.match(/^all health checks successfull/i)) {
+      if (lastLine.match(/^all health checks successful/i)) {
         return "up";
       }
       return "outage";
