@@ -1,3 +1,5 @@
+[![Tests](https://github.com/ADHO/adho-status/workflows/Tests/badge.svg)](https://github.com/ADHO/adho-status/actions?query=workflow%3ATests)
+
 # ADHO Status Dashboard
 
 A lightweight dashboard for displaying the status of ADHO-supported infrastructure.
