@@ -74,6 +74,12 @@ def do_check(check):
     return False
 
 
+def do_section(heading, checks):
+    deco = "=" * int(LINE_LENGTH - len(heading) - 6)
+    print(colored(f"\n==== {heading} {deco}", "yellow", attrs=["bold"]))
+    return sum(not do_check(check) for check in checks["services"].values())
+
+
 def main():
     """ Command-line entry-point. """
     parser = argparse.ArgumentParser(description="Description: {}".format(__file__))
@@ -89,18 +95,15 @@ def main():
     args = parser.parse_args()
 
     if args.get_config_from_github:
-        config = get_config_from_github()
+        config_contents = get_config_from_github()
     else:
         with open("../src/config.js", "r") as _fh:
-            config = _fh.read()
+            config_contents = _fh.read()
 
-    checks = parse_config(config)
+    config = parse_config(config_contents)
 
-    for heading, section in checks.items():
-        deco = "=" * int(LINE_LENGTH - len(heading) - 6)
-        print(colored(f"\n==== {heading} {deco}", "yellow", attrs=["bold"]))
-        if sum(not do_check(check) for check in section["services"].values()):
-            raise SystemExit(1)
+    if sum(do_section(heading, checks) for heading, checks in config.items()):
+        raise SystemExit(1)
 
     raise SystemExit(0)
 
