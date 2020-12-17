@@ -11,7 +11,7 @@ const StatusItem = ({
   <div className={`status-item ${serviceStatus}`}>
     <div className="status-icon">{statusIcon}</div>
     <div className="status-text">
-      <a href={serviceUrl}>
+      <a href={serviceUrl} target="_blank" rel="noreferrer">
         <h3 className="service-name">{serviceName}</h3>
       </a>
       <p className="status-message">{statusMessage}</p>
