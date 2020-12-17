@@ -1,4 +1,5 @@
 [![Tests](https://github.com/ADHO/adho-status/workflows/Tests/badge.svg)](https://github.com/ADHO/adho-status/actions?query=workflow%3ATests)
+[![codecov](https://codecov.io/gh/ADHO/adho-status/branch/main/graph/badge.svg)](https://codecov.io/gh/ADHO/adho-status)
 
 # ADHO Status Dashboard
 
