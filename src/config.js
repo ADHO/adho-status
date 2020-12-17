@@ -11,7 +11,7 @@ export const services = {
         matchText: "<title>Our Mission | ADHO</title>",
       },
       dh2017: {
-        displayName: "dh2017",
+        displayName: "DH2017 Conference Site",
         endpointUrl: "https://dh2017.adho.org/",
         needsCors: true,
         serviceUrl: "https://dh2017.adho.org/",
@@ -20,7 +20,7 @@ export const services = {
           "<title>Digital Humanities 2017 &#8211; Montreal, Canada, August 8-11, 2017</title>",
       },
       dh2018: {
-        displayName: "dh2018",
+        displayName: "DH2018 Conference Site",
         endpointUrl: "https://dh2018.adho.org/",
         needsCors: true,
         serviceUrl: "https://dh2018.adho.org/",
@@ -28,7 +28,7 @@ export const services = {
         matchText: "<title>DH 2018 &#8211; Ciudad de México</title>",
       },
       dh2020: {
-        displayName: "dh2020",
+        displayName: "DH2020 Conference Site",
         endpointUrl: "https://dh2020.adho.org/",
         needsCors: true,
         serviceUrl: "https://dh2020.adho.org/",
