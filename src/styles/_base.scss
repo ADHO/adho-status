@@ -13,20 +13,24 @@ p {
 }
 
 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
   color: var(--link-color);
+  display: inline-block;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
     border-bottom: 1px solid var(--active-link);
+    margin-bottom: 1px;
     color: var(--active-link);
     text-decoration: none;
   }
 
   &:active {
     border-bottom-width: 2px;
+    margin-bottom: 0;
   }
 }
 
