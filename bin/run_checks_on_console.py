@@ -28,6 +28,9 @@ def colored(text, *args, **kwargs):
 
 
 def get_config_from_github():
+    """Fetch the latest config from GitHub -- useful so that the script/repo doesn't have
+    to be re-deployed if config checks are added/changed/deleted."""
+
     config_url = "https://raw.githubusercontent.com/ADHO/adho-status/main/src/config.js"
     response = requests.get(config_url)
 
@@ -35,6 +38,9 @@ def get_config_from_github():
 
 
 def parse_config(config):
+    """Get the JavaScript object from the config file, and parse it to a python
+    dictionary.  (Note: it's **not** JSON, hence the need for pyyaml.)"""
+
     services_object_regex = regex.compile(r"services\s*=\s*(\{(?:[^{}]|(?1))*\})")
     checks = services_object_regex.search(config)
 
