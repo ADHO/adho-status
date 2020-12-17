@@ -4,6 +4,9 @@
     console.  If all checks complete successfully, the return code will be 0 (success) --
     otherwise, it will be 1 (error).  This makes it suitable for use from a cron job.
 
+    Requirements:
+      pip3 install regex requests pyyaml termcolor
+
     Suggested usage from cron:
       SHELL=/bin/bash
       5 * * * *  output=$(/path/to/run_checks_on_console.py) || echo "$output"
