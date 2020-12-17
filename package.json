@@ -42,10 +42,11 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "./setupTests.js"
+      "./__tests__/setupFilesAfterEnv.js"
     ],
     "roots": [
-      "./__tests__/",
+      "./__tests__/components",
+      "./__tests__/utils",
       "src/"
     ],
     "coverageDirectory": "./coverage/",
