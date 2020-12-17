@@ -74,7 +74,8 @@ def do_check(check):
     return False
 
 
-def do_section(heading, checks):
+def do_section(checks):
+    heading = checks["heading"]
     deco = "=" * int(LINE_LENGTH - len(heading) - 6)
     print(colored(f"\n==== {heading} {deco}", "yellow", attrs=["bold"]))
     return sum(not do_check(check) for check in checks["services"].values())
@@ -102,7 +103,7 @@ def main():
 
     config = parse_config(config_contents)
 
-    if sum(do_section(heading, checks) for heading, checks in config.items()):
+    if sum(do_section(checks) for checks in config.values()):
         raise SystemExit(1)
 
     raise SystemExit(0)
