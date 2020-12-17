@@ -23,16 +23,16 @@ describe("<StatusItem />", () => {
   });
 
   it("displays the service name", () => {
-    const wrapper = shallowWrapper({ serviceName: "Main AHDO Site" });
-    expect(wrapper.find(".service-name").text()).toEqual("Main AHDO Site");
+    const wrapper = shallowWrapper({ serviceName: "Main ADHO Site" });
+    expect(wrapper.find(".service-name").text()).toEqual("Main ADHO Site");
   });
 
   it("adds a link to the service name if URL is provided", () => {
     const wrapper = shallowWrapper({
-      serviceName: "Main AHDO Site",
+      serviceName: "Main ADHO Site",
       serviceUrl: "https://adho.org/",
     });
-    expect(wrapper.find(".service-name").text()).toEqual("Main AHDO Site");
+    expect(wrapper.find(".service-name").text()).toEqual("Main ADHO Site");
     expect(wrapper.find(".status-text a").prop("href")).toEqual(
       "https://adho.org/",
     );
