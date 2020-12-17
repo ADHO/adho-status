@@ -23,10 +23,10 @@ StatusItem.propTypes = {
   serviceStatus: PropTypes.string.isRequired,
   serviceName: PropTypes.string.isRequired,
   statusMessage: PropTypes.string.isRequired,
-  statusIcon: PropTypes.string.isRequired,
+  statusIcon: PropTypes.string,
   serviceUrl: PropTypes.string,
 };
 
-StatusItem.defaultProps = { serviceUrl: null };
+StatusItem.defaultProps = { serviceUrl: null, statusIcon: "" };
 
 export default StatusItem;
