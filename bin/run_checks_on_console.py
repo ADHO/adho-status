@@ -21,6 +21,9 @@ import yaml
 from termcolor import colored as _colored
 
 
+LINE_LENGTH = 80
+
+
 def colored(text, *args, **kwargs):
     if sys.stdout.isatty():
         return _colored(text, *args, **kwargs)
@@ -48,20 +51,25 @@ def parse_config(config):
 
 
 def do_check(check):
-    print(f"Checking {check['displayName']}...")
+    notice = f"Checking {check['displayName']}..."
+    print(notice, end=" ", flush=True)
     response = requests.get(check["endpointUrl"])
 
     test = check["matchText"] in response.text
     if response.status_code == 200 and test:
-        print(colored("✔ 200 Okay!", "green", attrs=["bold"]))
+        response_text = "✔ 200 Okay!"
+        print(
+            " " * (LINE_LENGTH - len(notice) - 2 - len(response_text)),
+            colored(response_text, "green", attrs=["bold"]),
+        )
         return True
 
+    response_text = (
+        f"✘ {response.status_code} (content test {('failed', 'passed')[test]})"
+    )
     print(
-        colored(
-            f"✘ {response.status_code} (content test {('failed', 'passed')[test]})",
-            "red",
-            attrs=["bold"],
-        )
+        " " * (LINE_LENGTH - len(notice) - 2 - len(response_text)),
+        colored(response_text, "red", attrs=["bold"]),
     )
     return False
 
@@ -88,8 +96,11 @@ def main():
 
     checks = parse_config(config)
 
-    if sum(not do_check(check) for check in checks.values()):
-        raise SystemExit(1)
+    for heading, section in checks.items():
+        deco = "=" * int(LINE_LENGTH - len(heading) - 6)
+        print(colored(f"\n==== {heading} {deco}", "yellow", attrs=["bold"]))
+        if sum(not do_check(check) for check in section["services"].values()):
+            raise SystemExit(1)
 
     raise SystemExit(0)
 
