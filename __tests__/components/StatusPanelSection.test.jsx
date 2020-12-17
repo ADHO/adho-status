@@ -1,26 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { services } from "../../src/config";
 import StatusPanelSection from "../../src/components/StatusPanelSection";
 
 let wrapper;
 
-const services = {
-  testSite1: {
-    displayName: "Test Site 1",
-    endpointUrl: "https://example1.org/",
-    serviceUrl: "https://example1.org/",
-    test: "testResponseForText",
-    matchText: "<title>Test Site 1</title>",
-  },
-  testSite2: {
-    displayName: "Test Site 2",
-    endpointUrl: "https://example2.org/",
-    needsCors: true,
-    serviceUrl: "https://example2.org/",
-    test: "testResponseForText",
-    matchText: "<title>Test Site 2</title>",
-  },
-};
+const groupOneServices = services.groupOne.services;
 
 const buildFetchResponse = (status, text = "", json = {}) => ({
   status,
@@ -35,7 +20,7 @@ const initTest = (fetchResponse) => {
     jest.spyOn(React, "useEffect").mockImplementation((f) => f());
     global.fetch = jest.fn(() => Promise.resolve(fetchResponse));
     wrapper = shallow(
-      <StatusPanelSection heading="Test Section" services={services} />,
+      <StatusPanelSection heading="Test Section" services={groupOneServices} />,
     );
   };
 };
