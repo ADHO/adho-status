@@ -21,6 +21,7 @@ p.status-message {
   border-width: 0 1px 1px 0;
   border-color: var(--border-color);
   border-style: solid;
+  color: var(--main-accent);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
