@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: var(--main-accent);
   border-bottom: 1px solid var(--border-color);
   box-sizing: border-box;
   left: 0;
@@ -31,6 +31,7 @@ header {
   }
 
   h1 {
+    color: white;
     flex: 1 1 auto;
     font-size: var(--f3);
     line-height: 75px;
@@ -44,6 +45,10 @@ header {
       left: 0;
       top: 0;
       position: absolute;
+
+      &:hover {
+        filter: drop-shadow(0 0 4px white);
+      }
     }
   }
 
