@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StatusItem from "./StatusItem";
-import { services, statuses } from "../config";
+import { statuses } from "../config";
 
-const ServiceGrid = ({ serviceStatuses }) => (
+const ServiceGrid = ({ services, serviceStatuses }) => (
   <div id="services">
     {Object.entries(services).map(([key, service]) => {
       const serviceStatus = serviceStatuses[key];
@@ -24,6 +24,7 @@ const ServiceGrid = ({ serviceStatuses }) => (
 );
 
 ServiceGrid.propTypes = {
+  services: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   serviceStatuses: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
