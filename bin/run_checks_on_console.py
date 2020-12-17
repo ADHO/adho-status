@@ -7,9 +7,9 @@
     Requirements:
       pip3 install regex requests pyyaml termcolor
 
-    Suggested usage from cron:
+    Example usage from cron (checks every five minutes, emails full report on failure):
       SHELL=/bin/bash
-      5 * * * *  output=$(/path/to/run_checks_on_console.py) || echo "$output"
+      */5 * * * *  output=$(/path/to/run_checks_on_console.py -g) || echo "$output"
 """
 
 import argparse
