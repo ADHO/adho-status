@@ -24,7 +24,7 @@ describe("ServiceGrid", () => {
 
   it("renders a Status Item for each check in the config", () => {
     const wrapper = shallowWrapper(serviceStatuses);
-    expect(wrapper.find("div#services StatusItem").length).toEqual(
+    expect(wrapper.find("div.services StatusItem").length).toEqual(
       Object.keys(groupOneServices).length,
     );
   });
@@ -33,10 +33,10 @@ describe("ServiceGrid", () => {
     const wrapper = shallowWrapper(serviceStatuses);
 
     expect(
-      wrapper.find("div#services StatusItem").at(0).props().serviceStatus,
+      wrapper.find("div.services StatusItem").at(0).props().serviceStatus,
     ).toEqual("up"); // Stubbed success above
     expect(
-      wrapper.find("div#services StatusItem").at(1).props().serviceStatus,
+      wrapper.find("div.services StatusItem").at(1).props().serviceStatus,
     ).toEqual("outage");
   });
 });
