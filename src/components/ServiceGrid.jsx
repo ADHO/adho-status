@@ -4,7 +4,7 @@ import StatusItem from "./StatusItem";
 import { statuses } from "../config";
 
 const ServiceGrid = ({ services, serviceStatuses }) => (
-  <div id="services">
+  <div className="services">
     {Object.entries(services).map(([key, service]) => {
       const serviceStatus = serviceStatuses[key];
       const status = statuses[serviceStatus];
