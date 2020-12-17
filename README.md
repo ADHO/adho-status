@@ -5,6 +5,8 @@
 
 A lightweight dashboard for displaying the status of ADHO-supported infrastructure.
 
+Also included is a [python script](bin/run_checks_on_console.py) that reads the same [config file](src/config.js) and runs the checks from a command-line interface. This script has been written to be suitable for use from `cron` or other schedulers (preferably on an always-up server unconnected to the ones that run the services being checked, but it can also be run on a workstation) -- see the script for details.
+
 ## Run Locally
 
 1. `git clone` this repository
