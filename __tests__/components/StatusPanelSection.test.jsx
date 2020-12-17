@@ -1,31 +1,26 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { statuses } from "../../src/config";
-import StatusPanel from "../../src/components/StatusPanel";
+import StatusPanelSection from "../../src/components/StatusPanelSection";
 
-const mockStatuses = statuses;
 let wrapper;
 
-jest.mock("../../src/config", () => ({
-  services: {
-    testSite1: {
-      displayName: "Test Site 1",
-      endpointUrl: "https://example1.org/",
-      serviceUrl: "https://example1.org/",
-      test: "testResponseForText",
-      matchText: "<title>Test Site 1</title>",
-    },
-    testSite2: {
-      displayName: "Test Site 2",
-      endpointUrl: "https://example2.org/",
-      needsCors: true,
-      serviceUrl: "https://example2.org/",
-      test: "testResponseForText",
-      matchText: "<title>Test Site 2</title>",
-    },
+const services = {
+  testSite1: {
+    displayName: "Test Site 1",
+    endpointUrl: "https://example1.org/",
+    serviceUrl: "https://example1.org/",
+    test: "testResponseForText",
+    matchText: "<title>Test Site 1</title>",
   },
-  statuses: mockStatuses,
-}));
+  testSite2: {
+    displayName: "Test Site 2",
+    endpointUrl: "https://example2.org/",
+    needsCors: true,
+    serviceUrl: "https://example2.org/",
+    test: "testResponseForText",
+    matchText: "<title>Test Site 2</title>",
+  },
+};
 
 const buildFetchResponse = (status, text = "", json = {}) => ({
   status,
@@ -39,7 +34,9 @@ const initTest = (fetchResponse) => {
   return () => {
     jest.spyOn(React, "useEffect").mockImplementation((f) => f());
     global.fetch = jest.fn(() => Promise.resolve(fetchResponse));
-    wrapper = shallow(<StatusPanel />);
+    wrapper = shallow(
+      <StatusPanelSection heading="Test Section" services={services} />,
+    );
   };
 };
 

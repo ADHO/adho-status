@@ -1,7 +1,25 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { services } from "../../src/config";
+// import { services } from "../../src/config";
 import ServiceGrid from "../../src/components/ServiceGrid";
+
+const services = {
+  testSite1: {
+    displayName: "Test Site 1",
+    endpointUrl: "https://example1.org/",
+    serviceUrl: "https://example1.org/",
+    test: "testResponseForText",
+    matchText: "<title>Test Site 1</title>",
+  },
+  testSite2: {
+    displayName: "Test Site 2",
+    endpointUrl: "https://example2.org/",
+    needsCors: true,
+    serviceUrl: "https://example2.org/",
+    test: "testResponseForText",
+    matchText: "<title>Test Site 2</title>",
+  },
+};
 
 function shallowWrapper(serviceStatuses) {
   return shallow(
@@ -24,7 +42,7 @@ describe("ServiceGrid", () => {
     );
   });
 
-  it("passes the approrpiate props to the StatusItem", () => {
+  it("passes the appropriate props to the StatusItem", () => {
     const wrapper = shallowWrapper(serviceStatuses);
 
     expect(
