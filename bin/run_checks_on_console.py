@@ -14,6 +14,7 @@
 
 import argparse
 import sys
+import textwrap
 
 import regex
 import requests
@@ -53,20 +54,35 @@ def parse_config(config):
 def do_check(check):
     notice = f"Checking {check['displayName']}..."
     print(notice, end=" ", flush=True)
-    response = requests.get(check["endpointUrl"])
 
-    test = check["matchText"] in response.text
-    if response.status_code == 200 and test:
-        response_text = "✔ 200 Okay!"
-        print(
-            " " * (LINE_LENGTH - len(notice) - 2 - len(response_text)),
-            colored(response_text, "green", attrs=["bold"]),
+    try:
+        response = requests.get(check["endpointUrl"])
+
+        test = check["matchText"] in response.text
+        if response.status_code == 200 and test:
+            response_text = "✔ 200 Okay!"
+            print(
+                " " * (LINE_LENGTH - len(notice) - 2 - len(response_text)),
+                colored(response_text, "green", attrs=["bold"]),
+            )
+            return True
+
+        response_text = (
+            f"✘ {response.status_code} (content test {('failed', 'passed')[test]})"
         )
-        return True
+    except requests.exceptions.RequestException as exc:
+        response_text = (
+            " " * (LINE_LENGTH - len(notice) - 2 - len("✘ Failed!"))
+            + "✘ Failed!\n"
+            + textwrap.indent(
+                "\n".join(
+                    textwrap.fill(line, LINE_LENGTH) + ":"
+                    for line in str(exc).split(":")
+                ),
+                " > ",
+            )
+        )
 
-    response_text = (
-        f"✘ {response.status_code} (content test {('failed', 'passed')[test]})"
-    )
     print(
         " " * (LINE_LENGTH - len(notice) - 2 - len(response_text)),
         colored(response_text, "red", attrs=["bold"]),
