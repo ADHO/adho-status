@@ -76,7 +76,7 @@ def do_check(check):
             + "✘ Failed!\n"
             + textwrap.indent(
                 "\n".join(
-                    textwrap.fill(line, LINE_LENGTH) + ":"
+                    textwrap.fill(line, LINE_LENGTH - 3) + ":"
                     for line in str(exc).split(":")
                 ),
                 " > ",
