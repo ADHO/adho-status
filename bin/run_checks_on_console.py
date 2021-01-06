@@ -58,7 +58,9 @@ def do_check(check):
     try:
         response = requests.get(check["endpointUrl"])
 
-        test = check["matchText"] in response.text
+        # unescape encoded newline and tabs
+        match_text = check["matchText"].replace("\\n", "\n").replace("\\t", "\t")
+        test = match_text in response.text
         if response.status_code == 200 and test:
             response_text = "✔ 200 Okay!"
             print(
