@@ -121,6 +121,36 @@ export const services = {
         matchText:
           "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
       },
+      bostondh: {
+        displayName: "bostondh.org",
+        endpointUrl: "http://bostondh.org/",
+        needsCors: true,
+        serviceUrl: "http://bostondh.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          '<h2 class="featured-subtitle">\n\t\t\tBoston DH Consortium\t\t</h2>',
+      },
+      dhcenternet: {
+        displayName: "dhcenternet.org",
+        endpointUrl: "http://dhcenternet.org/",
+        needsCors: true,
+        serviceUrl: "http://dhcenternet.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>centerNet | An international network of digital humanities centers</title>",
+      },
+      dighum: {
+        displayName: "dig-hum.de",
+        endpointUrl: "https://dig-hum.de/",
+        needsCors: true,
+        serviceUrl: "https://dig-hum.de/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>digital humanities im deutschsprachigen raum</title> ",
+      },
     },
   },
 };
