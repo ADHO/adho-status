@@ -127,9 +127,8 @@ export const services = {
         needsCors: true,
         serviceUrl: "http://bostondh.org/",
         serviceIcon: "",
-        test: "testResponseForText",
-        matchText:
-          '<h2 class="featured-subtitle">\n\t\t\tBoston DH Consortium\t\t</h2>',
+        test: "testResponseAgainstRegex",
+        regex: /<h2 class="featured-subtitle">\s*Boston DH Consortium\s*<\/h2>/,
       },
       dhcenternet: {
         displayName: "dhcenternet.org",
