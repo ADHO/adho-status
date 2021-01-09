@@ -7,6 +7,13 @@ export function testResponseForText(response, serviceConfig) {
     .catch(() => "issue");
 }
 
+export function testResponseAgainstRegex(response, serviceConfig) {
+  return response
+    .text()
+    .then((data) => (serviceConfig.regex.test(data) ? "up" : "issue"))
+    .catch(() => "issue");
+}
+
 export function testDrupalHealthCheck(response) {
   return response
     .text()
