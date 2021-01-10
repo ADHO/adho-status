@@ -32,6 +32,39 @@ describe("serviceTests", () => {
     });
   });
 
+  describe("testResponseAgainstRegex", () => {
+    it("returns an issue if the response is empty", () => {
+      return expect(
+        serviceTests.testResponseAgainstRegex(response()),
+      ).resolves.toEqual("issue");
+    });
+
+    it("returns an issue if the regex does not match", () => {
+      return expect(
+        serviceTests.testResponseAgainstRegex(
+          response("<h1>🕱🕱 Site has been pwned! 🕱🕱</h1>"),
+          { regex: /<h1>\s*Legitimate Site Header[^<]+<\/h1>/i },
+        ),
+      ).resolves.toEqual("issue");
+    });
+
+    it("returns up if all the checks are successful", () => {
+      return expect(
+        serviceTests.testResponseAgainstRegex(
+          response(`
+          <html>
+            <body>
+              <h1>
+                Legitimate Site Header :: Homepage
+              </h1>
+            </body>
+          </html>`),
+          { regex: /<h1>\s*Legitimate Site Header[^<]+<\/h1>/i },
+        ),
+      ).resolves.toEqual("up");
+    });
+  });
+
   describe("testDrupalHealthCheck", () => {
     it("returns an outage if the expected success text is not present", () => {
       return expect(
