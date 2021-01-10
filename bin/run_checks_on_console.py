@@ -51,6 +51,21 @@ def parse_config(config):
     return yaml.safe_load(checks.group(1))
 
 
+def test_response_for_text(response, service_config):
+    return service_config["matchText"] in response.text
+
+
+def test_response_against_regex(response, service_config):
+    def parse_regex(js_regex):
+        """This is adequate for now, but this function may need to be upgraded to
+        deal with flags and/or with differences between Regex syntax in Python
+        and Javascript (see https://pypi.org/project/js-regex/)."""
+        return js_regex[1:-1]
+
+    reg = regex.compile(parse_regex(service_config["regex"]))
+    return reg.search(response.text)
+
+
 def do_check(check):
     notice = f"Checking {check['displayName']}..."
     print(notice, end=" ", flush=True)
@@ -58,9 +73,11 @@ def do_check(check):
     try:
         response = requests.get(check["endpointUrl"])
 
-        # unescape encoded newline and tabs
-        match_text = check["matchText"].replace("\\n", "\n").replace("\\t", "\t")
-        test = match_text in response.text
+        test = {
+            "testResponseForText": test_response_for_text,
+            "testResponseAgainstRegex": test_response_against_regex,
+        }[check["test"]](response, check)
+
         if response.status_code == 200 and test:
             response_text = "✔ 200 Okay!"
             print(
