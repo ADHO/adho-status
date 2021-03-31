@@ -20,8 +20,13 @@ current_branch=$(git rev-parse --abbrev-ref HEAD);
 
 unclean=$(git status --porcelain) && [ -n "$unclean" ] && abort "Working directory is not clean -- aborting!";
 
+commit=$(git log -n 1 --format="%h" HEAD);
 
-COMMIT_MESSAGE="Deploy from $(git log -n 1 --format="%h" HEAD) at $(date +"%Y-%m-%d %H:%M:%S %Z")";
+# replace tokens in index.html
+sed -i'' "s/%%COMMIT-HASH%%/$commit/" "$BUILD_FOLDER/index.html";
+sed -i'' "s/%%BUILD-DATE%%/$(date +%F)/" "$BUILD_FOLDER/index.html";
+
+commit_message="Deploy from $commit at $(date +"%Y-%m-%d %H:%M:%S %Z")";
 
 # Ensure $DEPLOY_BRANCH is up-to-date with remote
 git fetch --force origin "$DEPLOY_BRANCH":"$DEPLOY_BRANCH";
@@ -39,7 +44,7 @@ case $diff in
   0) git checkout --force "$MAIN_BRANCH";
      abort "'$BUILD_FOLDER' unchanged -- nothing to commit." 0;
      ;;
-  1) git --work-tree "$BUILD_FOLDER" commit -m "$COMMIT_MESSAGE";
+  1) git --work-tree "$BUILD_FOLDER" commit -m "$commit_message";
      git push origin "$DEPLOY_BRANCH";
      git checkout --force "$MAIN_BRANCH";
      ;;
