@@ -35,6 +35,14 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>DH2020</title>",
       },
+      dh2021: {
+        displayName: "DH2021 Conference Site",
+        endpointUrl: "https://dh2021.adho.org/",
+        needsCors: false,
+        serviceUrl: "https://dh2021.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>Digital Humanities 2021</title>",
+      },
     },
   },
   digitalHumanitiesDotOrg: {
