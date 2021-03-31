@@ -30,7 +30,7 @@ Also included is a [python script](bin/run_checks_on_console.py) that reads the 
 
 ## Deploy to GH Pages
 
-1. `./bin/deploy.sh` from the project root will install dependencies, build the static assets, and update and push to the `gh-pages` branch
+1. `./bin/gh-deploy.sh` from the project root will install dependencies, build the static assets, and update and push to the `gh-pages` branch
 1. Visit https://adho.github.io/adho-status/ or https://status.adho.org/
 
 ## Adding or Changing Service Tests
