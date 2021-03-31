@@ -30,7 +30,7 @@ export const services = {
       dh2020: {
         displayName: "DH2020 Conference Site",
         endpointUrl: "https://dh2020.adho.org/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://dh2020.adho.org/",
         test: "testResponseForText",
         matchText: "<title>DH2020</title>",
