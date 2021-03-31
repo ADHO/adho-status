@@ -5,6 +5,7 @@ set -euo pipefail;
 MAIN_BRANCH=main;
 DEPLOY_BRANCH=gh-pages;
 BUILD_FOLDER=dist;
+CNAME=status.adho.org;
 
 function abort() {
   [ ! -t 1 ] && printf "%s\n" "$1" >&2 && exit "${2-1}";
@@ -26,6 +27,7 @@ COMMIT_MESSAGE="Deploy from $(git log -n 1 --format="%h" HEAD) at $(date +"%Y-%m
 git fetch --force origin "$DEPLOY_BRANCH":"$DEPLOY_BRANCH";
 
 git symbolic-ref HEAD refs/heads/"$DEPLOY_BRANCH";
+[ -n "$CNAME" ] && echo "$CNAME" > "$BUILD_FOLDER/CNAME";
 
 git --work-tree "$BUILD_FOLDER" reset --mixed --quiet;
 git --work-tree "$BUILD_FOLDER" add --all;
