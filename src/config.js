@@ -22,7 +22,7 @@ export const services = {
       dh2018: {
         displayName: "DH2018 Conference Site",
         endpointUrl: "https://dh2018.adho.org/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://dh2018.adho.org/",
         test: "testResponseForText",
         matchText: "<title>DH 2018 &#8211; Ciudad de México</title>",
