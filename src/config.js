@@ -107,7 +107,7 @@ export const services = {
         serviceIcon: "",
         test: "testResponseForText",
         matchText:
-          "<title>Cultural Literacy Everywhere &#8211; Cultural Literacy Everywhere</title>",
+          "<title>My CMS &#8211; Cultural Literacy Everywhere</title>",
       },
       czadh: {
         displayName: "www.czadh.cz",
