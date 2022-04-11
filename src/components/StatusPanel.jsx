@@ -2,8 +2,7 @@ import React from "react";
 import StatusPanelSection from "./StatusPanelSection";
 import { services } from "../config";
 
-const StatusPanel = () => {
-  return (
+const StatusPanel = () => (
     <>
       {Object.keys(services).map((key) => (
         <StatusPanelSection
@@ -14,6 +13,5 @@ const StatusPanel = () => {
       ))}
     </>
   );
-};
 
 export default StatusPanel;
