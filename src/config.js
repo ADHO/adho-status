@@ -8,7 +8,7 @@ export const services = {
         needsCors: true,
         serviceUrl: "https://adho.org/",
         test: "testResponseForText",
-        matchText: "<title>Our Mission | ADHO</title>",
+        matchText: "<title>Alliance of Digital Humanities Organizations &#8211; A Global Coalition of Digital Humanities Organizations</title>",
       },
       dh2017: {
         displayName: "DH2017 Conference Site",
