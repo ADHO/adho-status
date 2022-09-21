@@ -73,8 +73,7 @@ export const services = {
         serviceUrl: "http://digitalhumanities.org/companion/",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText:
-          '<html xmlns:xtf="http://cdlib.org/xtf" xmlns:xs="http://www.w3.org/2001/XMLSchema">',
+        matchText: '<title>A Companion to Digital Humanities</title>',
       },
       companionDLS: {
         displayName: "A Companion to Digital Literary Studies",
