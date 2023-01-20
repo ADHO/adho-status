@@ -62,7 +62,7 @@ export const services = {
         displayName: "Digital Humanities Abstracts (1996-2003)",
         endpointUrl: "http://digitalhumanities.org/dh-abstracts/search",
         needsCors: false,
-        serviceUrl: "http://digitalhumanities.org/dh-abstracts/search",
+        serviceUrl: "https://digitalhumanities.org/dh-abstracts/search",
         serviceIcon: "",
         test: "testResponseForText",
         matchText: "<title>Digital Humanities Abstracts: Search Form</title>",
