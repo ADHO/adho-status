@@ -5,15 +5,16 @@ export const services = {
       mainAdhoSite: {
         displayName: "Main ADHO Site",
         endpointUrl: "https://adho.org/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://adho.org/",
         test: "testResponseForText",
-        matchText: "<title>Alliance of Digital Humanities Organizations &#8211; A Global Coalition of Digital Humanities Organizations</title>",
+        matchText:
+          "<title>Alliance of Digital Humanities Organizations &#8211; A Global Coalition of Digital Humanities Organizations</title>",
       },
       dh2017: {
         displayName: "DH2017 Conference Site",
         endpointUrl: "https://dh2017.adho.org/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://dh2017.adho.org/",
         test: "testResponseForText",
         matchText:
@@ -51,7 +52,7 @@ export const services = {
       dhq: {
         displayName: "DHQ Website",
         endpointUrl: "https://digitalhumanities.org/dhq/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://digitalhumanities.org/dhq/",
         serviceIcon: "",
         test: "testResponseForText",
@@ -60,7 +61,7 @@ export const services = {
       dhAbstracts: {
         displayName: "Digital Humanities Abstracts (1996-2003)",
         endpointUrl: "http://digitalhumanities.org/dh-abstracts/search",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "http://digitalhumanities.org/dh-abstracts/search",
         serviceIcon: "",
         test: "testResponseForText",
@@ -68,18 +69,18 @@ export const services = {
       },
       companion: {
         displayName: "A Companion to Digital Humanities",
-        endpointUrl: "http://digitalhumanities.org/companion/",
-        needsCors: true,
-        serviceUrl: "http://digitalhumanities.org/companion/",
+        endpointUrl: "https://companions.digitalhumanities.org/DH/",
+        needsCors: false,
+        serviceUrl: "https://companions.digitalhumanities.org/DH/",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText: '<title>A Companion to Digital Humanities</title>',
+        matchText: "<title>A Companion to Digital Humanities</title>",
       },
       companionDLS: {
         displayName: "A Companion to Digital Literary Studies",
-        endpointUrl: "http://digitalhumanities.org/companionDLS/",
-        needsCors: true,
-        serviceUrl: "http://digitalhumanities.org/companionDLS/",
+        endpointUrl: "https://companions.digitalhumanities.org/DLS/",
+        needsCors: false,
+        serviceUrl: "https://companions.digitalhumanities.org/DLS/",
         serviceIcon: "",
         test: "testResponseForText",
         matchText: "<title>A Companion to Digital Literary Studies</title>",
@@ -92,7 +93,7 @@ export const services = {
       humanities: {
         displayName: "4humanities.org",
         endpointUrl: "https://4humanities.org",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://4humanities.org",
         serviceIcon: "",
         test: "testResponseForText",
@@ -101,7 +102,7 @@ export const services = {
       cleurope: {
         displayName: "cleurope.eu",
         endpointUrl: "https://cleurope.eu",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://cleurope.eu",
         serviceIcon: "",
         test: "testResponseForText",
@@ -110,7 +111,7 @@ export const services = {
       czadh: {
         displayName: "www.czadh.cz",
         endpointUrl: "https://www.czadh.cz",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://www.czadh.cz",
         serviceIcon: "",
         test: "testResponseForText",
@@ -120,7 +121,7 @@ export const services = {
       geohumanities: {
         displayName: "geohumanities.org",
         endpointUrl: "https://geohumanities.org",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://geohumanities.org",
         serviceIcon: "",
         test: "testResponseForText",
@@ -129,18 +130,18 @@ export const services = {
       },
       bostondh: {
         displayName: "bostondh.org",
-        endpointUrl: "http://bostondh.org/",
-        needsCors: true,
-        serviceUrl: "http://bostondh.org/",
+        endpointUrl: "https://bostondh.org/",
+        needsCors: false,
+        serviceUrl: "https://bostondh.org/",
         serviceIcon: "",
         test: "testResponseAgainstRegex",
         regex: /<h2 class="featured-subtitle">\s*Boston DH Consortium\s*<\/h2>/,
       },
       dhcenternet: {
         displayName: "dhcenternet.org",
-        endpointUrl: "http://dhcenternet.org/",
-        needsCors: true,
-        serviceUrl: "http://dhcenternet.org/",
+        endpointUrl: "https://dhcenternet.org/",
+        needsCors: false,
+        serviceUrl: "https://dhcenternet.org/",
         serviceIcon: "",
         test: "testResponseForText",
         matchText:
@@ -149,7 +150,7 @@ export const services = {
       dighum: {
         displayName: "dig-hum.de",
         endpointUrl: "https://dig-hum.de/",
-        needsCors: true,
+        needsCors: false,
         serviceUrl: "https://dig-hum.de/",
         serviceIcon: "",
         test: "testResponseForText",
