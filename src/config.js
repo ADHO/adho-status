@@ -1,50 +1,90 @@
 export const services = {
-  adhoDotOrg: {
-    heading: "adho.org",
+  sites: {
+    heading: "Organization and Group Webites",
     services: {
-      mainAdhoSite: {
-        displayName: "Main ADHO Site",
+      adhoOrg: {
+        displayName: "adho.org",
         endpointUrl: "https://adho.org/",
         serviceUrl: "https://adho.org/",
         test: "testResponseForText",
         matchText:
           "<title>Alliance of Digital Humanities Organizations &#8211; A Global Coalition of Digital Humanities Organizations</title>",
       },
-      dh2017: {
-        displayName: "DH2017 Conference Site",
-        endpointUrl: "https://dh2017.adho.org/",
-        serviceUrl: "https://dh2017.adho.org/",
+      eadhOrg: {
+        displayName: "eadh.org",
+        endpointUrl: "https://eadh.org/",
+        serviceUrl: "https://eadh.org/",
+        serviceIcon: "",
         test: "testResponseForText",
         matchText:
-          "<title>Digital Humanities 2017 &#8211; Montreal, Canada, August 8-11, 2017</title>",
+          "<title>EADH - The European Association for Digital Humanities |</title>",
       },
-      dh2018: {
-        displayName: "DH2018 Conference Site",
-        endpointUrl: "https://dh2018.adho.org/",
-        serviceUrl: "https://dh2018.adho.org/",
+      digHumDe: {
+        displayName: "dig-hum.de",
+        endpointUrl: "https://dig-hum.de/",
+        serviceUrl: "https://dig-hum.de/",
+        serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>DH 2018 &#8211; Ciudad de México</title>",
+        matchText:
+          "<title>digital humanities im deutschsprachigen raum</title>",
       },
-      dh2020: {
-        displayName: "DH2020 Conference Site",
-        endpointUrl: "https://dh2020.adho.org/",
-        serviceUrl: "https://dh2020.adho.org/",
+      humanities: {
+        displayName: "4humanities.org",
+        endpointUrl: "https://4humanities.org",
+        serviceUrl: "https://4humanities.org",
+        serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>DH2020</title>",
+        matchText: "<title>4Humanities | Advocating for the Humanities</title>",
       },
-      dh2021: {
-        displayName: "DH2021 Conference Site",
-        endpointUrl: "https://dh2021.adho.org/",
-        serviceUrl: "https://dh2021.adho.org/",
+      cleurope: {
+        displayName: "cleurope.eu",
+        endpointUrl: "https://cleurope.eu",
+        serviceUrl: "https://cleurope.eu",
+        serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>Digital Humanities 2021</title>",
+        matchText: "<title>My CMS &#8211; Cultural Literacy Everywhere</title>",
+      },
+      czadh: {
+        displayName: "www.czadh.cz",
+        endpointUrl: "https://www.czadh.cz",
+        serviceUrl: "https://www.czadh.cz",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>CzADH █ &#8211; Česká asociace pro digitální humanitní vědy</title>",
+      },
+      dhcenternet: {
+        displayName: "dhcenternet.org",
+        endpointUrl: "https://dhcenternet.org/",
+        serviceUrl: "https://dhcenternet.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>centerNet | An international network of digital humanities centers</title>",
+      },
+      geohumanities: {
+        displayName: "geohumanities.org",
+        endpointUrl: "https://geohumanities.org",
+        serviceUrl: "https://geohumanities.org",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
+      },
+      bostondh: {
+        displayName: "bostondh.org",
+        endpointUrl: "https://bostondh.org/",
+        serviceUrl: "https://bostondh.org/",
+        serviceIcon: "",
+        test: "testResponseAgainstRegex",
+        regex: /<h2 class="featured-subtitle">\s*Boston DH Consortium\s*<\/h2>/,
       },
     },
   },
-  digitalHumanitiesDotOrg: {
-    heading: "digitalhumanities.org",
+  dhq: {
+    heading: "Digital Humanities Quarterly",
     services: {
-      dhq: {
+      dhqWebsite: {
         displayName: "DHQ Website",
         endpointUrl: "https://digitalhumanities.org/dhq/",
         serviceUrl: "https://digitalhumanities.org/dhq/",
@@ -52,6 +92,28 @@ export const services = {
         test: "testResponseForText",
         matchText: '<?xml version="1.0" encoding="UTF-8"?>',
       },
+      dhqWiki: {
+        displayName: "DHQ Wiki",
+        endpointUrl: "https://dhq.wikis.adho.org/index.php?title=Main_Page",
+        serviceUrl: "https://dhq.wikis.adho.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          '<link rel="EditURI" type="application/rsd+xml" href="http://dhq.wikis.adho.org/api.php?action=rsd"/>',
+      },
+      dhqStatic: {
+        displayName: "DHQ File Storage",
+        endpointUrl:
+          "https://dhq-static.digitalhumanities.org/.well-known/healthcheck",
+        serviceUrl: "https://dhq-static.digitalhumanities.org/",
+        serviceIcon: "",
+        test: "testResponseCode200",
+      },
+    },
+  },
+  digitalHumanitiesDotOrg: {
+    heading: "digitalhumanities.org",
+    services: {
       dhAbstracts: {
         displayName: "Digital Humanities Abstracts (1996-2003)",
         endpointUrl: "http://digitalhumanities.org/dh-abstracts/search",
@@ -78,68 +140,118 @@ export const services = {
       },
     },
   },
-  others: {
-    heading: "Others",
+  dhConferences: {
+    heading: "DH Conference Sites",
     services: {
-      humanities: {
-        displayName: "4humanities.org",
-        endpointUrl: "https://4humanities.org",
-        serviceUrl: "https://4humanities.org",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText: "<title>4Humanities | Advocating for the Humanities</title>",
-      },
-      cleurope: {
-        displayName: "cleurope.eu",
-        endpointUrl: "https://cleurope.eu",
-        serviceUrl: "https://cleurope.eu",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText: "<title>My CMS &#8211; Cultural Literacy Everywhere</title>",
-      },
-      czadh: {
-        displayName: "www.czadh.cz",
-        endpointUrl: "https://www.czadh.cz",
-        serviceUrl: "https://www.czadh.cz",
-        serviceIcon: "",
+      dh2023: {
+        displayName: "DH2023 Conference Site",
+        endpointUrl: "https://dh2023.adho.org/",
+        serviceUrl: "https://dh2023.adho.org/",
         test: "testResponseForText",
         matchText:
-          "<title>CzADH █ &#8211; Česká asociace pro digitální humanitní vědy</title>",
+          "<title>July 10-14 2023, Graz | Austria &#8211; DH 2023, July 10-14 2023, Graz | Austria</title>",
       },
-      geohumanities: {
-        displayName: "geohumanities.org",
-        endpointUrl: "https://geohumanities.org",
-        serviceUrl: "https://geohumanities.org",
-        serviceIcon: "",
+      dh2021: {
+        displayName: "DH2021 Conference Site",
+        endpointUrl: "https://dh2021.adho.org/",
+        serviceUrl: "https://dh2021.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>Digital Humanities 2021</title>",
+      },
+      dh2020: {
+        displayName: "DH2020 Conference Site",
+        endpointUrl: "https://dh2020.adho.org/",
+        serviceUrl: "https://dh2020.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>DH2020</title>",
+      },
+      dh2018: {
+        displayName: "DH2018 Conference Site",
+        endpointUrl: "https://dh2018.adho.org/",
+        serviceUrl: "https://dh2018.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>DH 2018 &#8211; Ciudad de México</title>",
+      },
+      dh2017: {
+        displayName: "DH2017 Conference Site",
+        endpointUrl: "https://dh2017.adho.org/",
+        serviceUrl: "https://dh2017.adho.org/",
         test: "testResponseForText",
         matchText:
-          "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
+          "<title>Digital Humanities 2017 &#8211; Montreal, Canada, August 8-11, 2017</title>",
       },
-      bostondh: {
-        displayName: "bostondh.org",
-        endpointUrl: "https://bostondh.org/",
-        serviceUrl: "https://bostondh.org/",
-        serviceIcon: "",
-        test: "testResponseAgainstRegex",
-        regex: /<h2 class="featured-subtitle">\s*Boston DH Consortium\s*<\/h2>/,
-      },
-      dhcenternet: {
-        displayName: "dhcenternet.org",
-        endpointUrl: "https://dhcenternet.org/",
-        serviceUrl: "https://dhcenternet.org/",
-        serviceIcon: "",
+    },
+  },
+  dhdConferences: {
+    heading: "DHd Conference Sites",
+    services: {
+      dh2023Cms: {
+        displayName: "DHd 2023 Conference Site (CMS Only)",
+        endpointUrl: "https://wp.dhd2023.dig-hum.de/wp-login.php",
+        serviceUrl: "https://wp.dhd2023.dig-hum.de/wp-login.php",
         test: "testResponseForText",
         matchText:
-          "<title>centerNet | An international network of digital humanities centers</title>",
+          '<form name="loginform" id="loginform" action="https://wp.dhd2023.dig-hum.de/wp-login.php" method="post">',
       },
-      dighum: {
-        displayName: "dig-hum.de",
-        endpointUrl: "https://dig-hum.de/",
-        serviceUrl: "https://dig-hum.de/",
-        serviceIcon: "",
+      dh2020: {
+        displayName: "DHd 2020 Conference Site",
+        endpointUrl: "https://dhd2020.dig-hum.de/",
+        serviceUrl: "https://dhd2020.dig-hum.de/",
         test: "testResponseForText",
         matchText:
-          "<title>digital humanities im deutschsprachigen raum</title> ",
+          "<title>DHd2020 - Spielräume | Paderborn, 02.-06.03.2020</title>",
+      },
+      dh2019: {
+        displayName: "DHd 2019 Conference Site",
+        endpointUrl: "https://dhd2019.dig-hum.de/",
+        serviceUrl: "https://dhd2019.dig-hum.de/",
+        test: "testResponseForText",
+        matchText: "<title>DHd 2019 - multimedial & multimodal</title>",
+      },
+      dhd2017: {
+        displayName: "DHd 2017 Conference Site",
+        endpointUrl: "https://dhd2017.dig-hum.de/",
+        serviceUrl: "https://dhd2017.dig-hum.de/",
+        test: "testResponseForText",
+        matchText: '<a href="/" aria-current="page">DHd 2017</a>',
+      },
+    },
+  },
+  mailListAdminPages: {
+    heading: "Mailing List Admin Pages",
+    services: {
+      listsDigitalhumanitiesOrg: {
+        displayName: "lists.digitalhumanities.org",
+        endpointUrl: "https://lists.digitalhumanities.org/mailman/listinfo",
+        serviceUrl: "https://lists.digitalhumanities.org/mailman/listinfo",
+        test: "testResponseForText",
+        matchText: "<TITLE>lists.digitalhumanities.org Mailing Lists</TITLE>",
+      },
+      listsTeiCOrg: {
+        displayName: "lists.tei-c.org",
+        endpointUrl: "https://lists.tei-c.org/mailman/listinfo",
+        serviceUrl: "https://lists.tei-c.org/mailman/listinfo",
+        test: "testResponseForText",
+        matchText: "<TITLE>lists.tei-c.org Mailing Lists</TITLE>",
+      },
+    },
+  },
+  adhoInfra: {
+    heading: "ADHO Internal Infrastructure",
+    services: {
+      umami: {
+        displayName: "Umami Analytics",
+        endpointUrl: "https://umami.adho.org/",
+        serviceUrl: "https://umami.adho.org/",
+        test: "testResponseForText",
+        matchText: '<body><div id="__next" data-reactroot="">',
+      },
+      listmonk: {
+        displayName: "listmonk Newsletter Management",
+        endpointUrl: "https://listmonk.adho.org/",
+        serviceUrl: "https://listmonk.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>listmonk</title>",
       },
     },
   },
