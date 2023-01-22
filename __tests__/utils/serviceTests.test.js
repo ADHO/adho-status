@@ -1,8 +1,9 @@
 import * as serviceTests from "../../src/utils/serviceTests";
 
-const response = (data) => ({
+const response = (data, status = 200) => ({
   json: () => Promise.resolve(data),
   text: () => Promise.resolve(data),
+  status,
 });
 
 describe("serviceTests", () => {
@@ -78,5 +79,17 @@ describe("serviceTests", () => {
           ),
         ),
       ).resolves.toEqual("up"));
+  });
+
+  describe("testResponseCode200", () => {
+    it("returns an issue if the response code is not 200", () =>
+      expect(
+        serviceTests.testResponseCode200(response("", 404)),
+      ).resolves.toEqual("issue"));
+
+    it("returns up if the response code is 200", () =>
+      expect(serviceTests.testResponseCode200(response())).resolves.toEqual(
+        "up",
+      ));
   });
 });
