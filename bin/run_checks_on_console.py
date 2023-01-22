@@ -52,7 +52,13 @@ def parse_config(config):
 
 
 def test_response_for_text(response, service_config):
+    if service_config["matchText"] not in response.text:
+        print(response.text, file=sys.stderr)
     return service_config["matchText"] in response.text
+
+
+def test_response_code_200(response, service_config):
+    return response.status_code == 200
 
 
 def test_response_against_regex(response, service_config):
@@ -72,10 +78,12 @@ def do_check(check):
 
     try:
         response = requests.get(check["endpointUrl"])
+        response.encoding = "utf-8"
 
         test = {
             "testResponseForText": test_response_for_text,
             "testResponseAgainstRegex": test_response_against_regex,
+            "testResponseCode200": test_response_code_200,
         }[check["test"]](response, check)
 
         if response.status_code == 200 and test:
@@ -117,7 +125,7 @@ def do_section(checks):
 
 
 def main():
-    """ Command-line entry-point. """
+    """Command-line entry-point."""
     parser = argparse.ArgumentParser(description="Description: {}".format(__file__))
 
     parser.add_argument(
