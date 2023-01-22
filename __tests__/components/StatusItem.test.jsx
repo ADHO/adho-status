@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import StatusItem from "../../src/components/StatusItem";
+import { statuses } from "../../src/config";
 
 function shallowWrapper(props) {
   return shallow(
@@ -44,7 +45,7 @@ describe("<StatusItem />", () => {
   });
 
   it("displays the status icon", () => {
-    const wrapper = shallowWrapper({ statusIcon: "✅" });
-    expect(wrapper.find(".status-icon").text()).toEqual("✅");
+    const wrapper = shallowWrapper({ statusIcon: statuses.up.icon });
+    expect(wrapper.find(".status-icon").html()).toContain(statuses.up.icon);
   });
 });
