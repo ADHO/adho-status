@@ -9,7 +9,10 @@ const StatusItem = ({
   serviceStatus,
 }) => (
   <div className={`status-item ${serviceStatus}`}>
-    <div className="status-icon">{statusIcon}</div>
+    <div
+      className="status-icon"
+      dangerouslySetInnerHTML={{ __html: statusIcon }}
+    />
     <div className="status-text">
       <a href={serviceUrl} target="_blank" rel="noreferrer">
         <h3 className="service-name">{serviceName}</h3>

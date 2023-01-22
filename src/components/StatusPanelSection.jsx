@@ -13,14 +13,7 @@ const StatusPanelSection = ({ heading, services }) => {
   //  when testing.
   React.useEffect(() => {
     Object.keys(services).forEach((key) => {
-      fetch(
-        (services[key].needsCors
-          ? "https://cors-anywhere.herokuapp.com/"
-          : "") + services[key].endpointUrl,
-        {
-          mode: "cors",
-        },
-      )
+      fetch(services[key].endpointUrl, { mode: "cors" })
         .then((response) => {
           if (response.status === 503) {
             setServiceStatuses((prevState) => ({

@@ -1,3 +1,9 @@
+export function testResponseCode200(response) {
+  // these tests are only invoked if response.status is 200
+  //  (as tested in StatusPanelSection.jsx), so this is redundant
+  return Promise.resolve(response.status === 200 ? "up" : "issue");
+}
+
 export function testResponseForText(response, serviceConfig) {
   return response
     .text()
