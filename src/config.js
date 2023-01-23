@@ -253,6 +253,13 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>listmonk</title>",
       },
+      lightmeter: {
+        displayName: "Lightmeter",
+        endpointUrl: "https://lightmeter.adho.org/",
+        serviceUrl: "https://lightmeter.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>controlcenter</title>",
+      },
     },
   },
 };
