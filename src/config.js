@@ -151,6 +151,12 @@ export const services = {
         matchText:
           "<title>July 10-14 2023, Graz | Austria &#8211; DH 2023, July 10-14 2023, Graz | Austria</title>",
       },
+      dh2023convalidator: {
+        displayName: "DH2023 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dh2023.adho.org/",
+        serviceUrl: "https://dhconvalidator.dh2023.adho.org/",
+        test: "testResponseCode200",
+      },
       dh2021: {
         displayName: "DH2021 Conference Site",
         endpointUrl: "https://dh2021.adho.org/",
@@ -185,6 +191,14 @@ export const services = {
   dhdConferences: {
     heading: "DHd Conference Sites",
     services: {
+      dh2024: {
+        displayName: "DHd 2024 Conference Site",
+        endpointUrl: "https://dhd2024.dig-hum.de/wp-login.php",
+        serviceUrl: "https://dhd2024.dig-hum.de/wp-login.php",
+        test: "testResponseForText",
+        matchText:
+          '<form name="loginform" id="loginform" action="https://dhd2024.dig-hum.de/wp-login.php" method="post">',
+      },
       dh2023Cms: {
         displayName: "DHd 2023 Conference Site (CMS Only)",
         endpointUrl: "https://wp.dhd2023.dig-hum.de/wp-login.php",
@@ -239,6 +253,14 @@ export const services = {
   adhoInfra: {
     heading: "ADHO Internal Infrastructure",
     services: {
+      nextcloud: {
+        displayName: "ADHO NextCloud",
+        endpointUrl: "https://nextcloud.adho.org/status.php",
+        serviceUrl: "https://nextcloud.adho.org/",
+        test: "testResponseForText",
+        matchText:
+          '"installed":true,"maintenance":false,"needsDbUpgrade":false',
+      },
       umami: {
         displayName: "Umami Analytics",
         endpointUrl: "https://umami.adho.org/",
