@@ -42,7 +42,7 @@ export const services = {
         serviceUrl: "https://cleurope.eu",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>My CMS &#8211; Cultural Literacy Everywhere</title>",
+        matchText: "<title>Cultural Literacy Everywhere</title>",
       },
       czadh: {
         displayName: "www.czadh.cz",
