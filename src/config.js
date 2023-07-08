@@ -208,7 +208,7 @@ export const services = {
           '<meta name="description" content="DHd2023 Luxemburg / Trier - Open Humanities Open Culture"/>',
       },
       dhd2022: {
-        displayName: "DHd 2020 Conference Site",
+        displayName: "DHd 2022 Conference Site",
         endpointUrl: "https://dhd2022.dig-hum.de/",
         serviceUrl: "https://dhd2022.dig-hum.de/",
         test: "testResponseForText",
