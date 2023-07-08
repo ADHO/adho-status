@@ -200,12 +200,12 @@ export const services = {
           '<form name="loginform" id="loginform" action="https://dhd2024.dig-hum.de/wp-login.php" method="post">',
       },
       dhd2023Cms: {
-        displayName: "DHd 2023 Conference Site (CMS Only)",
-        endpointUrl: "https://wp.dhd2023.dig-hum.de/wp-login.php",
-        serviceUrl: "https://wp.dhd2023.dig-hum.de/wp-login.php",
+        displayName: "DHd 2023 Conference Site",
+        endpointUrl: "https://dhd2023.dig-hum.de/",
+        serviceUrl: "https://dhd2023.dig-hum.de/",
         test: "testResponseForText",
         matchText:
-          '<form name="loginform" id="loginform" action="https://wp.dhd2023.dig-hum.de/wp-login.php" method="post">',
+          '<meta name="description" content="DHd2023 Luxemburg / Trier - Open Humanities Open Culture"/>',
       },
       dhd2022: {
         displayName: "DHd 2020 Conference Site",
@@ -214,7 +214,7 @@ export const services = {
         test: "testResponseForText",
         matchText:
           "<title>DHd 2022 | Digital Humanities im deutschsprachigen Raum</title>",
-      },      
+      },
       dhd2020: {
         displayName: "DHd 2020 Conference Site",
         endpointUrl: "https://dhd2020.dig-hum.de/",
@@ -289,7 +289,7 @@ export const services = {
         serviceUrl: "https://mainwp.adho.org/",
         test: "testResponseForText",
         matchText: "<title>Log In &lsaquo; MainWP &#8212; WordPress</title>",
-      },      
+      },
       lightmeter: {
         displayName: "Lightmeter",
         endpointUrl: "https://lightmeter.adho.org/",
