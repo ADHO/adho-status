@@ -1,6 +1,6 @@
 export const services = {
   sites: {
-    heading: "Organization and Group Webites",
+    heading: "Organization and Group Websites",
     services: {
       adhoOrg: {
         displayName: "adho.org",
