@@ -62,6 +62,14 @@ export const services = {
         matchText:
           "<title>centerNet | An international network of digital humanities centers</title>",
       },
+      membersAchOrg: {
+        displayName: "members.ach.org",
+        endpointUrl: "https://members.ach.org",
+        serviceUrl: "https://members.ach.org",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText: "<title>ACH Membership</title>",
+      },
       geohumanities: {
         displayName: "geohumanities.org",
         endpointUrl: "https://geohumanities.org",
