@@ -151,6 +151,14 @@ export const services = {
   dhConferences: {
     heading: "DH Conference Sites",
     services: {
+      dh2024: {
+        displayName: "DH2024 Conference Site",
+        endpointUrl: "https://dh2024.adho.org/",
+        serviceUrl: "https://dh2024.adho.org/",
+        test: "testResponseForText",
+        matchText:
+          "<title>DH2024 &#8211; Reinvention &amp; Responsibility</title>",
+      },      
       dh2023: {
         displayName: "DH2023 Conference Site",
         endpointUrl: "https://dh2023.adho.org/",
