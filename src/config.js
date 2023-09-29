@@ -167,12 +167,6 @@ export const services = {
         matchText:
           "<title>July 10-14 2023, Graz | Austria &#8211; DH 2023, July 10-14 2023, Graz | Austria</title>",
       },
-      dh2023convalidator: {
-        displayName: "DH2023 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dh2023.adho.org/",
-        serviceUrl: "https://dhconvalidator.dh2023.adho.org/",
-        test: "testResponseCode200",
-      },
       dh2021: {
         displayName: "DH2021 Conference Site",
         endpointUrl: "https://dh2021.adho.org/",
@@ -215,7 +209,13 @@ export const services = {
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2024.dig-hum.de/wp-login.php" method="post">',
       },
-      dhd2023Cms: {
+      dhd2024convalidator: {
+        displayName: "DHd 2024 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dhd2024.dig-hum.de/",
+        serviceUrl: "https://dhconvalidator.dhd2024.dig-hum.de/",
+        test: "testResponseCode200",
+      },
+      dhd2023: {
         displayName: "DHd 2023 Conference Site",
         endpointUrl: "https://dhd2023.dig-hum.de/",
         serviceUrl: "https://dhd2023.dig-hum.de/",
