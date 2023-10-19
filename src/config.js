@@ -158,7 +158,7 @@ export const services = {
         test: "testResponseForText",
         matchText:
           "<title>DH2024 &#8211; Reinvention &amp; Responsibility</title>",
-      },      
+      },
       dh2023: {
         displayName: "DH2023 Conference Site",
         endpointUrl: "https://dh2023.adho.org/",
@@ -267,10 +267,10 @@ export const services = {
       },
       listsTeiCOrg: {
         displayName: "lists.tei-c.org",
-        endpointUrl: "https://lists.tei-c.org/mailman/listinfo",
-        serviceUrl: "https://lists.tei-c.org/mailman/listinfo",
+        endpointUrl: "https://lists.tei-c.org/mailman/",
+        serviceUrl: "https://lists.tei-c.org/mailman/",
         test: "testResponseForText",
-        matchText: "<TITLE>lists.tei-c.org Mailing Lists</TITLE>",
+        matchText: "<title>\nList Index - lists.tei-c.org\n</title",
       },
     },
   },
