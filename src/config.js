@@ -79,14 +79,6 @@ export const services = {
         matchText:
           "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
       },
-      bostondh: {
-        displayName: "bostondh.org",
-        endpointUrl: "https://bostondh.org/",
-        serviceUrl: "https://bostondh.org/",
-        serviceIcon: "",
-        test: "testResponseAgainstRegex",
-        regex: /<h2 class="featured-subtitle">\s*Boston DH Consortium\s*<\/h2>/,
-      },
     },
   },
   dhq: {
