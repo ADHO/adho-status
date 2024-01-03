@@ -252,17 +252,18 @@ export const services = {
     services: {
       listsDigitalhumanitiesOrg: {
         displayName: "lists.digitalhumanities.org",
-        endpointUrl: "https://lists.digitalhumanities.org/mailman/listinfo",
-        serviceUrl: "https://lists.digitalhumanities.org/mailman/listinfo",
+        endpointUrl: "https://lists.digitalhumanities.org/mailman/",
+        serviceUrl: "https://lists.digitalhumanities.org/mailman/",
         test: "testResponseForText",
-        matchText: "<TITLE>lists.digitalhumanities.org Mailing Lists</TITLE>",
+        matchText:
+          "<title>\nList Index - lists.digitalhumanities.org\n</title>",
       },
       listsTeiCOrg: {
         displayName: "lists.tei-c.org",
         endpointUrl: "https://lists.tei-c.org/mailman/",
         serviceUrl: "https://lists.tei-c.org/mailman/",
         test: "testResponseForText",
-        matchText: "<title>\nList Index - lists.tei-c.org\n</title",
+        matchText: "<title>\nList Index - lists.tei-c.org\n</title>",
       },
     },
   },
