@@ -36,10 +36,10 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>4Humanities | Advocating for the Humanities</title>",
       },
-      cleurope: {
-        displayName: "cleurope.eu",
-        endpointUrl: "https://cleurope.eu",
-        serviceUrl: "https://cleurope.eu",
+      cle: {
+        displayName: "cle.world",
+        endpointUrl: "https://cle.world",
+        serviceUrl: "https://cle.world",
         serviceIcon: "",
         test: "testResponseForText",
         matchText: "<title>Cultural Literacy Everywhere</title>",
