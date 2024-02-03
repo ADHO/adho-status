@@ -248,7 +248,7 @@ export const services = {
     },
   },
   mailListAdminPages: {
-    heading: "Mailing List Admin Pages",
+    heading: "Mailing List Archives & Admin UIs",
     services: {
       listsDigitalhumanitiesOrg: {
         displayName: "lists.digitalhumanities.org",
