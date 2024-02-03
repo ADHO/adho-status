@@ -299,13 +299,6 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>Log In &lsaquo; MainWP &#8212; WordPress</title>",
       },
-      lightmeter: {
-        displayName: "Lightmeter",
-        endpointUrl: "https://lightmeter.adho.org/",
-        serviceUrl: "https://lightmeter.adho.org/",
-        test: "testResponseForText",
-        matchText: "<title>controlcenter</title>",
-      },
     },
   },
 };
