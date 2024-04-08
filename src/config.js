@@ -283,7 +283,7 @@ export const services = {
         endpointUrl: "https://umami.adho.org/",
         serviceUrl: "https://umami.adho.org/",
         test: "testResponseForText",
-        matchText: "<title>umami</title>",
+        matchText: "<title>Umami</title>",
       },
       listmonk: {
         displayName: "listmonk Newsletter Management",
