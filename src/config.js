@@ -141,7 +141,7 @@ export const services = {
     },
   },
   dhConferences: {
-    heading: "DH Conference Sites",
+    heading: "ADHO Conference Sites",
     services: {
       dh2024: {
         displayName: "DH2024 Conference Site",
