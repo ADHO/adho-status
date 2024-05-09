@@ -151,6 +151,12 @@ export const services = {
         matchText:
           "<title>DH2024 &#8211; Reinvention &amp; Responsibility</title>",
       },
+      dh2024convalidator: {
+        displayName: "DH2024 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dh2024.adho.org/",
+        serviceUrl: "https://dhconvalidator.dh2024.adho.org/",
+        test: "testResponseCode200",
+      },
       dh2023: {
         displayName: "DH2023 Conference Site",
         endpointUrl: "https://dh2023.adho.org/",
@@ -244,6 +250,13 @@ export const services = {
         serviceUrl: "https://dhd2017.dig-hum.de/",
         test: "testResponseForText",
         matchText: '<a href="/" aria-current="page">DHd 2017</a>',
+      },
+      dhd2016: {
+        displayName: "DHd 2016 Conference Site",
+        endpointUrl: "https://dhd2016.dig-hum.de/",
+        serviceUrl: "https://dhd2016.dig-hum.de/",
+        test: "testResponseForText",
+        matchText: "<title>DHd 2016 | DHd 2016</title>",
       },
     },
   },
