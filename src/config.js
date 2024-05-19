@@ -103,11 +103,11 @@ export const services = {
       },
       dhqStatic: {
         displayName: "DHQ File Storage",
-        endpointUrl:
-          "https://dhq-static.digitalhumanities.org/.well-known/healthcheck",
+        endpointUrl: "https://dhq-static.digitalhumanities.org/",
         serviceUrl: "https://dhq-static.digitalhumanities.org/",
         serviceIcon: "",
-        test: "testResponseCode200",
+        test: "testResponseForText",
+        matchText: "<title>ADHO :: DHQ Static</title>",
       },
     },
   },
