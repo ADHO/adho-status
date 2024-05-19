@@ -320,6 +320,13 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>Log In &lsaquo; MainWP &#8212; WordPress</title>",
       },
+      sftpgo: {
+        displayName: "ADHO SFTP Server",
+        endpointUrl: "https://sftp.adho.org/",
+        serviceUrl: "https://sftp.adho.org/",
+        test: "testResponseForText",
+        matchText: '<body class="app-blank">',
+      },
     },
   },
 };
