@@ -301,10 +301,10 @@ export const services = {
       },
       umami: {
         displayName: "Umami Analytics",
-        endpointUrl: "https://umami.adho.org/",
+        endpointUrl: "https://umami.adho.org/dashboard",
         serviceUrl: "https://umami.adho.org/",
         test: "testResponseForText",
-        matchText: "<title>Umami</title>",
+        matchText: "<title>Dashboard | Umami</title>",
       },
       listmonk: {
         displayName: "listmonk Newsletter Management",
