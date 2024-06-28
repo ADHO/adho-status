@@ -70,6 +70,14 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>ACH Membership</title>",
       },
+      mitgliedschaftDigitalhumanitiesDe: {
+        displayName: "mitgliedschaft.digitalhumanities.de",
+        endpointUrl: "https://mitgliedschaft.digitalhumanities.de",
+        serviceUrl: "https://mitgliedschaft.digitalhumanities.de",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText: "<title>mitgliedschaft.digitalhumanities.de</title>",
+      },
       geohumanities: {
         displayName: "geohumanities.org",
         endpointUrl: "https://geohumanities.org",
