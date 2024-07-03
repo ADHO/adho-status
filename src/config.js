@@ -70,6 +70,14 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>ACH Membership</title>",
       },
+      digitalhumanitiesDe: {
+        displayName: "digitalhumanities.de",
+        endpointUrl: "https://digitalhumanities.de",
+        serviceUrl: "https://digitalhumanities.de",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText: '<h1 class="site-title">Relaunch Webauftritt DHd</h1>',
+      },
       mitgliedschaftDigitalhumanitiesDe: {
         displayName: "mitgliedschaft.digitalhumanities.de",
         endpointUrl: "https://mitgliedschaft.digitalhumanities.de",
