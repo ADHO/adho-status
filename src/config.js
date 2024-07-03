@@ -223,12 +223,6 @@ export const services = {
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2024.dig-hum.de/wp-login.php" method="post">',
       },
-      dhd2024convalidator: {
-        displayName: "DHd 2024 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dhd2024.dig-hum.de/",
-        serviceUrl: "https://dhconvalidator.dhd2024.dig-hum.de/",
-        test: "testResponseCode200",
-      },
       dhd2023: {
         displayName: "DHd 2023 Conference Site",
         endpointUrl: "https://dhd2023.dig-hum.de/",
