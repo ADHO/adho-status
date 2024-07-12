@@ -76,7 +76,7 @@ export const services = {
         serviceUrl: "https://digitalhumanities.de",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText: '<h1 class="site-title">Relaunch Webauftritt DHd</h1>',
+        matchText: "<title>Relaunch Webauftritt DHd</title>",
       },
       mitgliedschaftDigitalhumanitiesDe: {
         displayName: "mitgliedschaft.digitalhumanities.de",
