@@ -310,6 +310,13 @@ export const services = {
         matchText:
           '"installed":true,"maintenance":false,"needsDbUpgrade":false',
       },
+      mattermost: {
+        displayName: "ADHO Mattermost Instance",
+        endpointUrl: "https://mattermost.adho.org/api/v4/system/ping",
+        serviceUrl: "https://mattermost.adho.org/",
+        test: "testResponseForText",
+        matchText: '"status":"OK"',
+      },
       umami: {
         displayName: "Umami Analytics",
         endpointUrl: "https://umami.adho.org/dashboard",
