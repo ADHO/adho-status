@@ -219,7 +219,7 @@ export const services = {
       dhd2025: {
         displayName: "DHd 2025 Conference Site",
         endpointUrl: "https://dhd2025.dig-hum.de/wp-login.php",
-        serviceUrl: "https://dhd2025.dig-hum.de/wp-login.php",
+        serviceUrl: "https://dhd2025.dig-hum.de/",
         test: "testResponseForText",
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2025.dig-hum.de/wp-login.php" method="post">',
@@ -227,7 +227,7 @@ export const services = {
       dhd2024: {
         displayName: "DHd 2024 Conference Site",
         endpointUrl: "https://dhd2024.dig-hum.de/wp-login.php",
-        serviceUrl: "https://dhd2024.dig-hum.de/wp-login.php",
+        serviceUrl: "https://dhd2024.dig-hum.de/",
         test: "testResponseForText",
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2024.dig-hum.de/wp-login.php" method="post">',
