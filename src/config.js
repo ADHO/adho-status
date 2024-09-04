@@ -160,6 +160,13 @@ export const services = {
   dhConferences: {
     heading: "ADHO Conference Sites",
     services: {
+      dh2025: {
+        displayName: "DH2025 Conference Site",
+        endpointUrl: "https://dh2025.adho.org/",
+        serviceUrl: "https://dh2025.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>DH2025</title>",
+      },
       dh2024: {
         displayName: "DH2024 Conference Site",
         endpointUrl: "https://dh2024.adho.org/",
@@ -223,6 +230,12 @@ export const services = {
         test: "testResponseForText",
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2025.dig-hum.de/wp-login.php" method="post">',
+      },
+      dhd2025convalidator: {
+        displayName: "DHd 2025 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dhd2025.dig-hum.de/",
+        serviceUrl: "https://dhconvalidator.dhd2025.dig-hum.de/",
+        test: "testResponseCode200",
       },
       dhd2024: {
         displayName: "DHd 2024 Conference Site",
