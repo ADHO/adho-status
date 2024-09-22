@@ -165,7 +165,8 @@ export const services = {
         endpointUrl: "https://dh2025.adho.org/",
         serviceUrl: "https://dh2025.adho.org/",
         test: "testResponseForText",
-        matchText: "<title>DH2025</title>",
+        matchText:
+          "<title>DH2025 &#8211; ADHO Digital Humanities conference 2025, NOVA FCSH, Lisbon, Portugal</title>",
       },
       dh2024: {
         displayName: "DH2024 Conference Site",
