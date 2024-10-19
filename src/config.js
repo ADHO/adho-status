@@ -176,12 +176,6 @@ export const services = {
         matchText:
           "<title>DH2024 &#8211; Reinvention &amp; Responsibility</title>",
       },
-      dh2024convalidator: {
-        displayName: "DH2024 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dh2024.adho.org/",
-        serviceUrl: "https://dhconvalidator.dh2024.adho.org/",
-        test: "testResponseCode200",
-      },
       dh2023: {
         displayName: "DH2023 Conference Site",
         endpointUrl: "https://dh2023.adho.org/",
