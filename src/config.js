@@ -60,7 +60,7 @@ export const services = {
         serviceIcon: "",
         test: "testResponseForText",
         matchText:
-          "<title>centerNet | An international network of digital humanities centers</title>",
+          "<title>centerNet &#8211; An International Network of Digital Humanities Centers</title>",
       },
       membersAchOrg: {
         displayName: "members.ach.org",
