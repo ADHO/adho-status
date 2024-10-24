@@ -16,6 +16,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001669",
     "prop-types": "^15.8.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
