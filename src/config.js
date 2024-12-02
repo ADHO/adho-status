@@ -85,7 +85,7 @@ export const services = {
         serviceUrl: "https://mitgliedschaft.digitalhumanities.de",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>mitgliedschaft.digitalhumanities.de</title>",
+        matchText: "<title>DHd-Mitgliedschaft</title>",
       },
       geohumanities: {
         displayName: "geohumanities.org",
