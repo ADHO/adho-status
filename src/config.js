@@ -218,6 +218,20 @@ export const services = {
   dhdConferences: {
     heading: "DHd Conference Sites",
     services: {
+      dhd2026: {
+        displayName: "DHd 2026 Conference Site",
+        endpointUrl: "https://dhd2026.digitalhumanities.de/wp-login.php",
+        serviceUrl: "https://dhd2026.digitalhumanities.de/",
+        test: "testResponseForText",
+        matchText:
+          '<form name="loginform" id="loginform" action="https://dhd2026.digitalhumanities.de/wp-login.php" method="post">',
+      },
+      dhd2026convalidator: {
+        displayName: "DHd 2026 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dhd2026.digitalhumanities.de/",
+        serviceUrl: "https://dhconvalidator.dhd2026.digitalhumanities.de/",
+        test: "testResponseCode200",
+      },
       dhd2025: {
         displayName: "DHd 2025 Conference Site",
         endpointUrl: "https://dhd2025.dig-hum.de/wp-login.php",
@@ -225,12 +239,6 @@ export const services = {
         test: "testResponseForText",
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2025.dig-hum.de/wp-login.php" method="post">',
-      },
-      dhd2025convalidator: {
-        displayName: "DHd 2025 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dhd2025.dig-hum.de/",
-        serviceUrl: "https://dhconvalidator.dhd2025.dig-hum.de/",
-        test: "testResponseCode200",
       },
       dhd2024: {
         displayName: "DHd 2024 Conference Site",
