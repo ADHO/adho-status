@@ -42,7 +42,7 @@ export const services = {
         serviceUrl: "https://cle.world",
         serviceIcon: "",
         test: "testResponseForText",
-        matchText: "<title>Cultural Literacy Everywhere</title>",
+        matchText: "<title>Cultural Literacy Research Network</title>",
       },
       czadh: {
         displayName: "www.czadh.cz",
