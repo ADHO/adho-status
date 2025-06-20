@@ -147,14 +147,6 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>A Companion to Digital Literary Studies</title>",
       },
-      dhAbstracts: {
-        displayName: "Digital Humanities Abstracts (1996-2003)",
-        endpointUrl: "https://digitalhumanities.org/dh-abstracts/search",
-        serviceUrl: "https://digitalhumanities.org/dh-abstracts/search",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText: "<title>Digital Humanities Abstracts: Search Form</title>",
-      },
     },
   },
   dhConferences: {
