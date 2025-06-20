@@ -103,8 +103,8 @@ export const services = {
     services: {
       dhqWebsite: {
         displayName: "DHQ Website",
-        endpointUrl: "https://digitalhumanities.org/dhq/",
-        serviceUrl: "https://digitalhumanities.org/dhq/",
+        endpointUrl: "https://dhq.digitalhumanities.org/",
+        serviceUrl: "https://dhq.digitalhumanities.org/",
         serviceIcon: "",
         test: "testResponseForText",
         matchText: '<?xml version="1.0" encoding="UTF-8"?>',
