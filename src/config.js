@@ -109,15 +109,6 @@ export const services = {
         test: "testResponseForText",
         matchText: '<?xml version="1.0" encoding="UTF-8"?>',
       },
-      dhqWiki: {
-        displayName: "DHQ Wiki",
-        endpointUrl: "https://dhq.wikis.adho.org/index.php?title=Main_Page",
-        serviceUrl: "https://dhq.wikis.adho.org/",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText:
-          '<link rel="EditURI" type="application/rsd+xml" href="http://dhq.wikis.adho.org/api.php?action=rsd"/>',
-      },
       dhqStatic: {
         displayName: "DHQ File Storage",
         endpointUrl: "https://dhq-static.digitalhumanities.org/",
