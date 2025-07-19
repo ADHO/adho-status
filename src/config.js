@@ -143,6 +143,13 @@ export const services = {
   dhConferences: {
     heading: "ADHO Conference Sites",
     services: {
+      dh2026: {
+        displayName: "DH2026 Conference Site",
+        endpointUrl: "https://dh2026.adho.org/",
+        serviceUrl: "https://dh2026.adho.org/",
+        test: "testResponseForText",
+        matchText: "<title>DH2026 in Daejeon, South Korea</title>",
+      },
       dh2025: {
         displayName: "DH2025 Conference Site",
         endpointUrl: "https://dh2025.adho.org/",
