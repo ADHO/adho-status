@@ -19,10 +19,10 @@ export const services = {
         matchText:
           "<title>EADH - The European Association for Digital Humanities |</title>",
       },
-      digHumDe: {
-        displayName: "dig-hum.de",
-        endpointUrl: "https://dig-hum.de/",
-        serviceUrl: "https://dig-hum.de/",
+      digitalhumanitiesDe: {
+        displayName: "digitalhumanities.de",
+        endpointUrl: "https://digitalhumanities.de",
+        serviceUrl: "https://digitalhumanities.de",
         serviceIcon: "",
         test: "testResponseForText",
         matchText:
@@ -70,15 +70,6 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>ACH Membership</title>",
       },
-      digitalhumanitiesDe: {
-        displayName: "digitalhumanities.de",
-        endpointUrl: "https://digitalhumanities.de",
-        serviceUrl: "https://digitalhumanities.de",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText:
-          "<title>digital humanities im deutschsprachigen raum</title>",
-      },
       mitgliedschaftDigitalhumanitiesDe: {
         displayName: "mitgliedschaft.digitalhumanities.de",
         endpointUrl: "https://mitgliedschaft.digitalhumanities.de",
@@ -86,6 +77,14 @@ export const services = {
         serviceIcon: "",
         test: "testResponseForText",
         matchText: "<title>DHd-Mitgliedschaft</title>",
+      },
+      membersEadhOrg: {
+        displayName: "members.eadh.org",
+        endpointUrl: "https://members.eadh.org",
+        serviceUrl: "https://members.eadh.org",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText: "<title>EADH Membership</title>",
       },
       geohumanities: {
         displayName: "geohumanities.org",
