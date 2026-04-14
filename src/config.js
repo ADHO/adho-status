@@ -149,6 +149,13 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>DH2026 in Daejeon, South Korea</title>",
       },
+      dhd2026convalidator: {
+        displayName: "DH2026 DH Convalidator",
+        endpointUrl: "https://dhconvalidator.dh2026.adho.org/",
+        serviceUrl: "https://dhconvalidator.dh2026.adho.org/",
+        test: "testResponseCode200",
+      },
+
       dh2025: {
         displayName: "DH2025 Conference Site",
         endpointUrl: "https://dh2025.adho.org/",
@@ -214,12 +221,6 @@ export const services = {
         test: "testResponseForText",
         matchText:
           '<form name="loginform" id="loginform" action="https://dhd2026.digitalhumanities.de/wp-login.php" method="post">',
-      },
-      dhd2026convalidator: {
-        displayName: "DHd 2026 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dhd2026.digitalhumanities.de/",
-        serviceUrl: "https://dhconvalidator.dhd2026.digitalhumanities.de/",
-        test: "testResponseCode200",
       },
       dhd2025: {
         displayName: "DHd 2025 Conference Site",
