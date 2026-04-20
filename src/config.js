@@ -1,6 +1,6 @@
 export const services = {
   sites: {
-    heading: "Organization and Group Websites",
+    heading: "Websites: Constituent Organizations",
     services: {
       adhoOrg: {
         displayName: "adho.org",
@@ -28,6 +28,11 @@ export const services = {
         matchText:
           "<title>digital humanities im deutschsprachigen raum</title>",
       },
+    },
+  },
+  sigsAndAffiliates: {
+    heading: "Websites: SIGs and Affiliates",
+    services: {
       humanities: {
         displayName: "4humanities.org",
         endpointUrl: "https://4humanities.org",
@@ -53,6 +58,15 @@ export const services = {
         matchText:
           "<title>CzADH █ &#8211; Česká asociace pro digitální humanitní vědy</title>",
       },
+      wogem: {
+        displayName: "wogem.adho.org",
+        endpointUrl: "https://wogem.adho.org/",
+        serviceUrl: "https://wogem.adho.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>DH-WoGeM &#8211; ADHO Women &amp; Gender Minorities SIG</title>",
+      },
       dhcenternet: {
         displayName: "dhcenternet.org",
         endpointUrl: "https://dhcenternet.org/",
@@ -62,6 +76,29 @@ export const services = {
         matchText:
           "<title>centerNet &#8211; An International Network of Digital Humanities Centers</title>",
       },
+      dhcenternetArchive: {
+        displayName: "archive.dhcenternet.org",
+        endpointUrl: "https://archive.dhcenternet.org/",
+        serviceUrl: "https://archive.dhcenternet.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "centerNet | An international network of digital humanities centers",
+      },
+      geohumanities: {
+        displayName: "geohumanities.org",
+        endpointUrl: "https://geohumanities.org",
+        serviceUrl: "https://geohumanities.org",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
+      },
+    },
+  },
+  civicrm: {
+    heading: "CiviCRM",
+    services: {
       membersAchOrg: {
         displayName: "members.ach.org",
         endpointUrl: "https://members.ach.org",
@@ -85,15 +122,6 @@ export const services = {
         serviceIcon: "",
         test: "testResponseForText",
         matchText: "<title>EADH Membership</title>",
-      },
-      geohumanities: {
-        displayName: "geohumanities.org",
-        endpointUrl: "https://geohumanities.org",
-        serviceUrl: "https://geohumanities.org",
-        serviceIcon: "",
-        test: "testResponseForText",
-        matchText:
-          "<title>GeoHumanities SIG &#8211; A Special Interest Group of the ADHO</title>",
       },
     },
   },
@@ -350,6 +378,14 @@ export const services = {
         serviceUrl: "https://sftp.adho.org/",
         test: "testResponseForText",
         matchText: '<body class="app-blank">',
+      },
+      change: {
+        displayName: "ADHO Governance Website (legacy)",
+        endpointUrl: "https://change.adho.org/",
+        serviceUrl: "https://change.adho.org/",
+        test: "testResponseForText",
+        matchText:
+          "<title>ADHO Governance Website | Engaging the global digital humanities community in our governance restructuring process.</title>",
       },
     },
   },
