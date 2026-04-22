@@ -338,11 +338,10 @@ export const services = {
     services: {
       nextcloud: {
         displayName: "ADHO NextCloud",
-        endpointUrl: "https://nextcloud.adho.org/status.php",
+        endpointUrl: "https://nextcloud.adho.org/login",
         serviceUrl: "https://nextcloud.adho.org/",
         test: "testResponseForText",
-        matchText:
-          '"installed":true,"maintenance":false,"needsDbUpgrade":false',
+        matchText: "Cloud platform for ADHO internal activities",
       },
       mattermost: {
         displayName: "ADHO Mattermost Instance",
