@@ -175,7 +175,7 @@ export const services = {
         endpointUrl: "https://dh2026.adho.org/",
         serviceUrl: "https://dh2026.adho.org/",
         test: "testResponseForText",
-        matchText: "<title>DH2026 in Daejeon, South Korea</title>",
+        matchText: "<title>HOME - DH2026 in Daejeon, South Korea</title>",
       },
       dhd2026convalidator: {
         displayName: "DH2026 DH Convalidator",
