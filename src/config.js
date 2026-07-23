@@ -362,7 +362,7 @@ export const services = {
         endpointUrl: "https://listmonk.adho.org/",
         serviceUrl: "https://listmonk.adho.org/",
         test: "testResponseForText",
-        matchText: "<title>listmonk</title>",
+        matchText: "<title>listmonk - Mailing list</title>",
       },
       mainwp: {
         displayName: "MainWP",
