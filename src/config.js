@@ -177,13 +177,6 @@ export const services = {
         test: "testResponseForText",
         matchText: "<title>HOME - DH2026 in Daejeon, South Korea</title>",
       },
-      dhd2026convalidator: {
-        displayName: "DH2026 DH Convalidator",
-        endpointUrl: "https://dhconvalidator.dh2026.adho.org/",
-        serviceUrl: "https://dhconvalidator.dh2026.adho.org/",
-        test: "testResponseCode200",
-      },
-
       dh2025: {
         displayName: "DH2025 Conference Site",
         endpointUrl: "https://dh2025.adho.org/",
