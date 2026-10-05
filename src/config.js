@@ -67,24 +67,24 @@ export const services = {
         matchText:
           "<title>DH-WoGeM &#8211; ADHO Women &amp; Gender Minorities SIG</title>",
       },
-      // dhcenternet: {
-      //   displayName: "dhcenternet.org",
-      //   endpointUrl: "https://dhcenternet.org/",
-      //   serviceUrl: "https://dhcenternet.org/",
-      //   serviceIcon: "",
-      //   test: "testResponseForText",
-      //   matchText:
-      //     "<title>centerNet &#8211; An International Network of Digital Humanities Centers</title>",
-      // },
-      // dhcenternetArchive: {
-      //   displayName: "archive.dhcenternet.org",
-      //   endpointUrl: "https://archive.dhcenternet.org/",
-      //   serviceUrl: "https://archive.dhcenternet.org/",
-      //   serviceIcon: "",
-      //   test: "testResponseForText",
-      //   matchText:
-      //     "centerNet | An international network of digital humanities centers",
-      // },
+      dhcenternet: {
+        displayName: "dhcenternet.org",
+        endpointUrl: "https://dhcenternet.org/",
+        serviceUrl: "https://dhcenternet.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "<title>centerNet &#8211; An International Network of Digital Humanities Centers</title>",
+      },
+      dhcenternetArchive: {
+        displayName: "archive.dhcenternet.org",
+        endpointUrl: "https://archive.dhcenternet.org/",
+        serviceUrl: "https://archive.dhcenternet.org/",
+        serviceIcon: "",
+        test: "testResponseForText",
+        matchText:
+          "centerNet | An international network of digital humanities centers",
+      },
       geohumanities: {
         displayName: "geohumanities.org",
         endpointUrl: "https://geohumanities.org",
